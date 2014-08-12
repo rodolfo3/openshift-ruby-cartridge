@@ -1,0 +1,25 @@
+Name: ruby
+Cartridge-Short-Name: RUBY
+Display-Name: Jekyll static web page and blog server
+Description: "A dynamic, open source programming language with a focus on simplicity and productivity."
+Version: '2.1.2'
+License: LGPL
+License-Url: http://www.gnu.org/copyleft/lesser.txt
+Vendor: Ruby
+Cartridge-Version: '0.0.1'
+Cartridge-Vendor: rodolfo3
+Source-Url: https://github.com/rodolfo3/openshift-ruby-cartridge.git
+Categories:
+  - plugin
+Website: https://www.ruby-lang.org
+Help-Topics:
+  "Developer Center": https://www.openshift.com/developers
+Provides:
+  - ruby-lang-2.1.2
+Subscribes:
+  set-env:
+    Type: "ENV:*"
+    Required: false
+Scaling:
+  Min: 1
+  Max: -1
