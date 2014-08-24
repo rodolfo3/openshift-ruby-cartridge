@@ -1,6 +1,6 @@
 Name: ruby
 Cartridge-Short-Name: RUBY
-Display-Name: Jekyll static web page and blog server
+Display-Name: ruby-lang
 Description: "A dynamic, open source programming language with a focus on simplicity and productivity."
 Version: '2.1.2'
 License: LGPL
