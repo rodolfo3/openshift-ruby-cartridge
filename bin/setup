@@ -10,3 +10,8 @@ cd ruby*
 ./configure --enable-shared --disable-install-doc --prefix=$OPENSHIFT_RUBY_DIR
 make
 make install
+
+cd $OPENSHIFT_RUBY_DIR
+cp ruby/lib/ruby/2.1.0/resolv.rb ruby/lib/ruby/2.1.0/resolv.rb.erb
+sed -i 's/0.0.0.0/<%= ENV["OPENSHIFT_NGINX_IP"] %>/g' ruby/lib/ruby/2.1.0/resolv.rb.erb
+erb ruby/lib/ruby/2.1.0/resolv.rb.erb > ruby/lib/ruby/2.1.0/resolv.rb
