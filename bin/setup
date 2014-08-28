@@ -1,17 +1,3 @@
 #!/bin/bash -eu
 
-source $OPENSHIFT_CARTRIDGE_SDK_BASH
-
-cd $OPENSHIFT_TMP_DIR
-wget -c http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.2.tar.gz
-tar zxvf ruby-2.1.2.tar.gz
-
-cd ruby*
-./configure --without-tk --prefix=$OPENSHIFT_RUBY_DIR
-make
-make install
-
-cd $OPENSHIFT_RUBY_DIR
-cp lib/ruby/2.1.0/resolv.rb lib/ruby/2.1.0/resolv.rb.erb
-sed -i 's/0.0.0.0/<%= ENV["OPENSHIFT_NGINX_IP"] %>/g' lib/ruby/2.1.0/resolv.rb.erb
-erb lib/ruby/2.1.0/resolv.rb.erb > lib/ruby/2.1.0/resolv.rb
+$OPENSHIFT_RUBY_DIR/bin/setup-run &> $OPENSHIFT_LOG_DIR/ruby.log
