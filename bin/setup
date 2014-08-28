@@ -3,7 +3,7 @@
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
 cd $OPENSHIFT_TMP_DIR
-wget -c http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.2.2.tar.gz
+wget -c http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.2.tar.gz
 tar zxvf ruby-2.1.2.tar.gz
 
 cd ruby*
