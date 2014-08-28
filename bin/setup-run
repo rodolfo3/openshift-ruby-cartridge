@@ -7,7 +7,7 @@ wget -c http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.2.tar.gz
 tar zxvf ruby-2.1.2.tar.gz
 
 cd ruby*
-./configure --without-tk --prefix=$OPENSHIFT_RUBY_DIR
+./configure --without-tk --disable-install-doc --prefix=$OPENSHIFT_RUBY_DIR
 make
 make install
 
