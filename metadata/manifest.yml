@@ -2,7 +2,7 @@ Name: ruby
 Cartridge-Short-Name: RUBY
 Display-Name: ruby-lang
 Description: "A dynamic, open source programming language with a focus on simplicity and productivity."
-Version: '2.1.2'
+Version: '2.1.5'
 License: LGPL
 License-Url: http://www.gnu.org/copyleft/lesser.txt
 Vendor: Ruby
@@ -15,7 +15,7 @@ Website: https://www.ruby-lang.org
 Help-Topics:
   "Developer Center": https://www.openshift.com/developers
 Provides:
-  - ruby-lang-2.1.2
+  - ruby-lang-2.1.5
 Subscribes:
   set-env:
     Type: "ENV:*"
